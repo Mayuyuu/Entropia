@@ -1,0 +1,10 @@
+Correction de bug
+
+    -Rectification de la vélocité du Player
+    -Correction du temps d'apparatition de la cavité
+    -Changement de sprite pour les plateformes glitchées fixé, le collider également
+
+Ajouts
+
+    -Menu Pause sur Echap
+    -Dezoom de Camera
