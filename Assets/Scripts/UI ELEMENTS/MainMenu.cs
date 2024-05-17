@@ -5,12 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour 
 {
-
+	private AudioManager audioManager;
 	[SerializeField] Animator transitionAnim;
 
+
+	public void Start()
+	{
+		audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+	}
 	public void PlayGame() 
 	{
 		SceneManager.LoadScene("Tutorial");
+		AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 		 
 	}
 
@@ -18,6 +25,7 @@ public class MainMenu : MonoBehaviour
 	public void QuitGame() 
 	{
 		Application.Quit();
+		AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
 	}
 
 	public void NextLevel() 

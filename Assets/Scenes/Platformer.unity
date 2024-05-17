@@ -292,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 10160026}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.351421, y: -2.8058658, z: 0.15928273}
+  m_LocalPosition: {x: -1.29, y: -2.8058658, z: 0.15928273}
   m_LocalScale: {x: 0.297, y: 2.4803703, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4745,12 +4745,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -11583,7 +11583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1360775296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12188,7 +12188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1429057997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13910,6 +13910,9 @@ MonoBehaviour:
   JumpLayerMask:
     serializedVersion: 2
     m_Bits: 8
+  GroundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   FallGravityScaleMultiplier: 1.2
   CoyoteTime: 0.06
   GroundCheckOffsetY: 0

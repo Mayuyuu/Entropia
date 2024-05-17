@@ -45,16 +45,16 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.126
-  m_Pitch: 1
+  m_Pitch: -0.35
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 86
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.113
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -118,7 +118,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.96
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -181,6 +181,7 @@ MonoBehaviour:
   checkpoint: {fileID: 0}
   portalIn: {fileID: 0}
   portalOut: {fileID: 0}
+  ButtonUi: {fileID: 8300000, guid: 4cdc6408d158fa848b7b84dc20fd77ca, type: 3}
 --- !u!1 &7896450142618284406
 GameObject:
   m_ObjectHideFlags: 0
