@@ -42,7 +42,6 @@ public class CameraZoom : MonoBehaviour
         {
             zoom = minZoom;
         }
-        
     }
     
     public IEnumerator ZoomCooldown()
