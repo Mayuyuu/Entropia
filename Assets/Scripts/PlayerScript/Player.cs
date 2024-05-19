@@ -173,7 +173,7 @@ public class Player : MonoBehaviour
         animator.SetFloat("Walk",WalkVelocity);
         dressAnim.SetFloat("Walk", WalkVelocity);
         headAnim.SetFloat("Walk", WalkVelocity);
-        Debug.Log(WalkVelocity);
+        //Debug.Log(WalkVelocity);
         Vector2 targetVelocity = new Vector2(HorizontalInput * GameManager.Instance.getSpeed(), RbPlayer.velocity.y);
         RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref zeroVelocity, GameManager.Instance.getSmoothing());
         RotateWhenMoving();

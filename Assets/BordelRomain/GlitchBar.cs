@@ -34,6 +34,9 @@ public class GlitchBar : MonoBehaviour
     public GameObject GameOverPanel;
 
 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,14 +54,8 @@ public class GlitchBar : MonoBehaviour
 
 
 
-        //Debug pour tester l'augmentation du glitch. (oui romain)A mettre ailleur BWAAAA !!
-        // if (Input.GetKeyDown(KeyCode.T))
-        // {
-        //     //Augmenter le glitch
-        //     maBar.GlitchPower += maBar.GlitchPower + incGlitch;
-        // }
 
-        //A mettre dans un autre script (un gamemanager par exemple). BWAAAA (oui romain x2)!!
+
         if (GlitchPower >= 1)
         {
             Time.timeScale = 0f;
@@ -96,14 +93,9 @@ public class GlitchBar : MonoBehaviour
         ChildActuel = Parent.transform.childCount;
         ChildManquants = ChildBase - ChildActuel;
         GlitchPower = ratio * ChildManquants;  //Glitch c'est la variable qui va de 0 � 1 qui g�re le glitch
-        /*if (ChildManquants >= ChildMax)
-        {
-            //Le joueur meurt
-        }*/
+    
     }
 
 
 }
-//+ elt cass� -> augmenter barre glitch + fixer le max possible pour la barre
-// quand barre glitch atteint son max
-//kill player + changement de sc�ne
+
