@@ -10,7 +10,7 @@ public class CheckPoint : MonoBehaviour
     private object collision;
     private AudioManager audioManager;
 
-    public Sprite DATASAVED;
+    [SerializeField] public Sprite DATASAVED;
 
 
 	private void Start() 
