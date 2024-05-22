@@ -10,6 +10,9 @@ public class CheckPoint : MonoBehaviour
     private object collision;
     private AudioManager audioManager;
 
+    public Sprite DATASAVED;
+
+
 	private void Start() 
     {
 		
@@ -24,6 +27,7 @@ public class CheckPoint : MonoBehaviour
             playercp = GameManager.Instance.getPlayer();
             playercp.UpdateCheckPoint(transform.position); //permet d'actualiser sa position
             //lancer anim SEt trigger animator
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = DATASAVED;
             AudioManager._Instance.PlaySFX(audioManager.checkpoint);
         }
         
