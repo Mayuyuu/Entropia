@@ -191,7 +191,17 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, JumpForce);
+        RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, JumpForce); //si enlevée ne peut plus sauter
+        float JumpVelocity = Mathf.Abs(RbPlayer.velocity.x);
+        animator.SetFloat("Jump",JumpForce);
+        //dressAnim.SetFloat("Walk", JumpForce);
+        //headAnim.SetFloat("Jump", WalkVelocity);
+        //Debug.Log(WalkVelocity);
+
+        //je sais pas quoi en faire
+        Vector2 targetVelocity = new Vector2(HorizontalInput * GameManager.Instance.getSpeed(), RbPlayer.velocity.y);
+        RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref zeroVelocity, GameManager.Instance.getSmoothing());
+        // RotateWhenMoving();
     }
 
     private void UpdateGroundCheckOffset()
