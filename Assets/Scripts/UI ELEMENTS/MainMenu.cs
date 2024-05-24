@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 	}
 	public void PlayGame() 
 	{
-		SceneManager.LoadScene("Tutorial");
+		SceneManager.LoadScene("CUTSCENE 01");
 		AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 		 

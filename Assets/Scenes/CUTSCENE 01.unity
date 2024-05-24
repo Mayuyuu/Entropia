@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 721013289}
   - component: {fileID: 721013288}
   - component: {fileID: 721013290}
+  - component: {fileID: 721013291}
   m_Layer: 5
   m_Name: RED
   m_TagString: Untagged
@@ -460,6 +461,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &721013291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721013286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cae2b8a220e4a449bfba344e918720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &886178255
 GameObject:
   m_ObjectHideFlags: 0
