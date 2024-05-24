@@ -322,6 +322,14 @@ PrefabInstance:
       propertyPath: GroundCheckOffsetY
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 2272425075707066780, guid: 477138268d8e3574ea00b5733837c7fa, type: 3}
+      propertyPath: JumpLayerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272425075707066780, guid: 477138268d8e3574ea00b5733837c7fa, type: 3}
+      propertyPath: GroundLayerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2452157496564174770, guid: 477138268d8e3574ea00b5733837c7fa, type: 3}
       propertyPath: m_SortingOrder
       value: 0

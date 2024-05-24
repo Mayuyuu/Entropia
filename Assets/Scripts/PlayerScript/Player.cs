@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
         UpdateGroundCheckOffset();
         HorizontalInput = Input.GetAxisRaw("Horizontal");
 
-        Collider2D col = Physics2D.OverlapBox(GroundCheckPosition, new Vector2(GroundCheckWidth, GroundCheckHeight), 0, JumpLayerMask); //Overlap -> boite fictive qui permets de check si le player est en collision avec le sol ou pas pour le faire sauter
+        Collider2D col = Physics2D.OverlapBox(GroundCheckPosition, new Vector2(GroundCheckWidth, GroundCheckHeight), 0, GroundLayerMask); //Overlap -> boite fictive qui permets de check si le player est en collision avec le sol ou pas pour le faire sauter
         // isGrounded = (col != null); //If statement plus court
         if (col != null)
         {
@@ -106,6 +106,7 @@ public class Player : MonoBehaviour
         {
             GameManager.Instance.setIsJumping(false);
         }
+        //animator.SetFloat("Jump",RbPlayer.velocity.y);
     }
     //  public void SpawnPlayer()
     // {
@@ -193,12 +194,8 @@ public class Player : MonoBehaviour
     {
         RbPlayer.velocity = new Vector2(RbPlayer.velocity.x, JumpForce); //si enlevée ne peut plus sauter
         float JumpVelocity = Mathf.Abs(RbPlayer.velocity.x);
-        animator.SetFloat("Jump",JumpForce);
-        //dressAnim.SetFloat("Walk", JumpForce);
-        //headAnim.SetFloat("Jump", WalkVelocity);
-        //Debug.Log(WalkVelocity);
 
-        //je sais pas quoi en faire
+
         Vector2 targetVelocity = new Vector2(HorizontalInput * GameManager.Instance.getSpeed(), RbPlayer.velocity.y);
         RbPlayer.velocity = Vector2.SmoothDamp(RbPlayer.velocity, targetVelocity, ref zeroVelocity, GameManager.Instance.getSmoothing());
         // RotateWhenMoving();
