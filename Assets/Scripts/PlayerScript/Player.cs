@@ -136,6 +136,10 @@ public class Player : MonoBehaviour
         {
             //En train de descendre (rechute) -> pour redescendre plus vite que le saut
             RbPlayer.gravityScale = GravityScale * FallGravityScaleMultiplier;
+            // STATE DS ANIMATOR ISFALLING
+            // else zeroVelocity>0
+            
+
         }
         else
         {
