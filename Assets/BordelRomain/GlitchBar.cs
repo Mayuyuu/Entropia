@@ -95,6 +95,11 @@ public class GlitchBar : MonoBehaviour
         GlitchPower = ratio * ChildManquants;  //Glitch c'est la variable qui va de 0 � 1 qui g�re le glitch
     
     }
+    public void Home()
+    {
+        SceneManager.LoadScene("MainMenu");
+        
+    }
 
 
 }

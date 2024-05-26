@@ -49,17 +49,12 @@ public class PlayerGameplay : MonoBehaviour
             StartCoroutine(SWcooldown());
 
 
-            //transform.Translate(Vector2.right *speed* Time.deltaTime);
+          
 
         }
 
 
-        //Debug pour tester l'augmentation du glitch. A mettre ailleur BWAAAA !!
-        // if(Input.GetKeyDown(KeyCode.O)) 
-        // {
-        //     //Augmenter le glitch
-        //     maBar.GlitchPower = maBar.GlitchPower + incGlitch;
-        // }
+       
 
 
     }
@@ -97,11 +92,11 @@ public class PlayerGameplay : MonoBehaviour
         if (coll.gameObject.CompareTag("RevealPlateform"))      //Si le go contenant le coll a le tag "Reveal" : on recupere son sprite renderer et on le change
         {
 
-            AlphaLerpDelay = ((gameObject.transform.position - coll.gameObject.transform.position).magnitude) / RangeSW;        //On calcul la distance entre le joueur et la plateforme ce qui determine l'Alpha du Lerp Ci-Dessous
+            AlphaLerpDelay = ((gameObject.transform.position - coll.gameObject.transform.position).magnitude) / RangeSW;        //On calcule la distance entre le joueur et la plateforme ce qui determine l'Alpha du Lerp Ci-Dessous
             InteractionDelay = Mathf.Lerp(DurationMinPS, DurationMaxPS, AlphaLerpDelay);        //On determine le temps que mets la SW à atteindre la plateforme grace à l'Alpha Lerp et donc la distance player -> Plateforme
             yield return new WaitForSeconds(InteractionDelay);      //On attend et on lance l'effet voulu
-            //coll.gameObject.GetComponent<SpriteRenderer>().sprite = RevealSprite; //Changer le sprite des plateformes par celui voulu (à définir directement dans l'inspecteur du player)
-            coll.gameObject.GetComponent<SpriteRenderer>().material = RevealMat;                                                                      //changer le material coll.gameObject.GetComponent<SpriteRenderer>().material
+           
+            coll.gameObject.GetComponent<SpriteRenderer>().material = RevealMat; //changer le material coll.gameObject.GetComponent<SpriteRenderer>().material
             coll.GetComponent<Collider2D>().isTrigger = false;
         }
 
@@ -129,12 +124,6 @@ public class PlayerGameplay : MonoBehaviour
     }
 
 
-
-    /*void OnDrawGizmos()
-    {
-        Gizmos.color = new Color (0, 255, 0, 70);
-        Gizmos.DrawSphere(transform.position, RangeSW);
-    }*/
 
 
 

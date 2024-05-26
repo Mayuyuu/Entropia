@@ -151,17 +151,10 @@ public class Player : MonoBehaviour
 
         Utility.HandleSlopes(transform,GroundLayerMask,1.5f);
 
-        // if (isOnPlatform)
-        // {
-        //     RbPlayer.velocity=new Vector2(targetSpeed+platformRb.velocity.x, RbPlayer.velocity.y);
-        // }
-        // else
-        // {
-        //     RbPlayer.velocity=new Vector2(targetSpeed, RbPlayer.velocity.y);
-        // }
+      
     }
 
-    //Permet de temporiser un certain temps (CoyoteTime), sur le saut hors d'une plate-forme 
+    //--------------Coyote time
     private IEnumerator UpdateisGroundedState(bool isGroundedState)
     {
         yield return new WaitForSeconds(CoyoteTime);
