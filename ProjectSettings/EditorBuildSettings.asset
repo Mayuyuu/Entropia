@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Platformer.unity
     guid: a04b1049f8fb1f64b926e2e6128f2bf8
+  - enabled: 1
+    path: Assets/Scenes/EndCinematic.unity
+    guid: 4e7d4b1f87b2cb84680f85d72f30998b
+  - enabled: 1
+    path: Assets/Scenes/End credits.unity
+    guid: ef63d9db25fd97248b4a20b1e40ebcc2
   m_configObjects: {}
