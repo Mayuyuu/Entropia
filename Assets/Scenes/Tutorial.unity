@@ -1334,7 +1334,7 @@ GameObject:
   - component: {fileID: 187402064}
   - component: {fileID: 187402063}
   m_Layer: 0
-  m_Name: sapec
+  m_Name: space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2027,6 +2027,22 @@ PrefabInstance:
     - target: {fileID: 62106817533504357, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
       propertyPath: m_Name
       value: GlitchBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797209174579460194, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 39.62253
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797209174579460194, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 39.62253
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797209174579460194, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 39.62253
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797209174579460194, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 152
       objectReference: {fileID: 0}
     - target: {fileID: 8099149856299100505, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
       propertyPath: m_Pivot.x
@@ -5750,14 +5766,14 @@ RectTransform:
   m_GameObject: {fileID: 1687459699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.25, z: 1}
+  m_LocalScale: {x: 1.5730681, y: 1.966335, z: 1.5730681}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 856233958}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 863, y: -504.4}
+  m_AnchoredPosition: {x: 816, y: -492}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687459701
@@ -5802,8 +5818,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 4dfa131bab4dbb04baff28074008e1b9, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 6d21597754a11d2438ca7c78f2ea60fd, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 0748731cfb6a2e848902c161ba7e1e40, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 049705b4e823721469b243ba1272c8e3, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -5849,7 +5865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a7b5ab5c1d02ec948a31ccf03fcbc30b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c9d80af8bda4ae4c93da1599d830dea, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
