@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class qUITGAME : MonoBehaviour
 {
-   public void QuitGame() 
-	{
-		Application.Quit();
-		// AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
-	}
+   public void Home()
+    {
+        SceneManager.LoadScene("MainMenu");
+        
+    }
 }

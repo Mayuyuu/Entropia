@@ -511,8 +511,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: cb07f15613ff27f468a91ea3984bd533, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 7af3b9c7375369d45886ddfc92fe8160, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 45947ffa1dc992849a8f035e01e69aec, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 135defabd3761364a91e5efdddca84e1, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -528,7 +528,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 123188127}
         m_TargetAssemblyTypeName: qUITGAME, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: Home
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bef309ce4683f574e81f335c5870e825, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b30b481f09d61504397ddbde5816591f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac7e2288b8195364d847098c66787109, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b1de64baaf4c038469f87c5227c2bf1d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -41,4 +41,8 @@ public class MainMenu : MonoBehaviour
 		//SceneManager.LoadScene("Platformer");
 		transitionAnim.SetTrigger("Start");
 	}
+	public void Options()
+	{
+		AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
+	}
 }
