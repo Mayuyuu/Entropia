@@ -39,13 +39,13 @@ public class PortalController : MonoBehaviour
 
     IEnumerator PortalIn()
     {
-        playerRb.simulated =false;
+        // playerRb.simulated =false;
         anim.Play("Portal In");
         yield return new WaitForSeconds(0.5f);
         player.transform.position = destination.transform.position;
         anim.Play("Portal Out");
         //yield return new WaitForSeconds(0.5f);
-        playerRb.simulated =true;
+        // playerRb.simulated =true;
     }
 
 
