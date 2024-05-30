@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+// using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
@@ -19,10 +21,13 @@ public class CameraZoom : MonoBehaviour
     private bool isZoomReady = true;
 
     [SerializeField] private Camera cam;
+
+    [SerializeField] public Image cooldownImage;
     // Start is called before the first frame update
     void Start()
     {
         zoom = cam.orthographicSize;
+        cooldownImage.fillAmount =0;
     }
 
     // Update is called once per frame
@@ -47,8 +52,19 @@ public class CameraZoom : MonoBehaviour
     public IEnumerator ZoomCooldown()
     {
         zoom = maxZoom;
+        cooldownImage.fillAmount =1;
+
+        float elapsedTime =0f;
+        while (elapsedTime < ZoomCooldownTime)
+        {
+            elapsedTime += Time.deltaTime;
+            cooldownImage.fillAmount = 1-(elapsedTime / ZoomCooldownTime);
+            yield return null;
+        }
+
+        cooldownImage.fillAmount = 0;
         
-        yield return new WaitForSeconds(ZoomCooldownTime);
+        // yield return new WaitForSeconds(ZoomCooldownTime);
         isZoomReady = true;
 
     }

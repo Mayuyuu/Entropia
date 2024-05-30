@@ -30,6 +30,7 @@ public class PlayerGameplay : MonoBehaviour
 
     [SerializeField] GameObject MainCamera;
     private AudioManager audioManager;
+    
 
 
     void Start()
@@ -109,8 +110,9 @@ public class PlayerGameplay : MonoBehaviour
             //MainCamera.GetComponent<Shake>().Update();
             yield return new WaitForSeconds(InteractionDelay);
             Destroy(coll.gameObject);
-            // AudioManager._Instance.PlaySFX(audioManager.DestroyedElt);
+           
             MainCamera.GetComponent<Shake>().StartShaking();
+             AudioManager._Instance.PlaySFX(audioManager.DestroyedElt);
             
 
         }
