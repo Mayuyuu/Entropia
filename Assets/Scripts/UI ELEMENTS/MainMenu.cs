@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
 	public void QuitGame() 
 	{
 		Application.Quit();
-		AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
+		// AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
 	}
 
 	public void NextLevel() 
@@ -41,7 +41,7 @@ public class MainMenu : MonoBehaviour
 		//SceneManager.LoadScene("Platformer");
 		transitionAnim.SetTrigger("Start");
 	}
-	public void Options()
+	public void SFXButtons()
 	{
 		AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
 	}

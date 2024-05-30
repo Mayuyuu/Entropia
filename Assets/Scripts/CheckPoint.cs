@@ -17,7 +17,7 @@ public class CheckPoint : MonoBehaviour
     {
 		
         checkpointPos = transform.position;
-        //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collider)

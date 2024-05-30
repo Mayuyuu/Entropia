@@ -3827,6 +3827,18 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3567834758630631769, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
   m_PrefabInstance: {fileID: 1586977623}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &906177698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906177691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0bb9d577c112644b5c97da5df0be33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &913848734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,6 +5531,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7440387718027282080, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
       insertIndex: -1
       addedObject: {fileID: 906177692}
+    - targetCorrespondingSourceObject: {fileID: 7440387718027282080, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 906177698}
   m_SourcePrefab: {fileID: 100100000, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
 --- !u!4 &1589167014 stripped
 Transform:
@@ -5836,6 +5851,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1687459701}
         m_TargetAssemblyTypeName: SkipButton, Assembly-CSharp
         m_MethodName: OnSkipButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 906177698}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: SFXButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

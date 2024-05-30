@@ -5,12 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SKIPCINEMATIC : MonoBehaviour
 {
-    // Start is called before the first frame update
-     public void OnSkipButtonClick()
+    // private AudioManager audioManager;
+    // public void SFXButtons()
+    // {
+    //     AudioManager._Instance.PlaySFX(audioManager.ButtonUi);
+    // }
+    // // Start is called before the first frame update
+    public void OnSkipButtonClick()
     {
         // StartCoroutine(ButtonSound());
         SceneManager.LoadScene("Tutorial");
-        
-         
+
+
     }
+
 }

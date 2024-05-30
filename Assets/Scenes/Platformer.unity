@@ -16868,6 +16868,18 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3567834758630631769, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
   m_PrefabInstance: {fileID: 1886682607}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &896877708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896877701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0bb9d577c112644b5c97da5df0be33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &901297341
 GameObject:
   m_ObjectHideFlags: 0
@@ -36676,6 +36688,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7440387718027282080, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
       insertIndex: -1
       addedObject: {fileID: 896877702}
+    - targetCorrespondingSourceObject: {fileID: 7440387718027282080, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 896877708}
   m_SourcePrefab: {fileID: 100100000, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
 --- !u!1 &1889924678
 GameObject:
