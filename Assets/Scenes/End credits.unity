@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 123188123}
   - component: {fileID: 123188126}
   - component: {fileID: 123188127}
+  - component: {fileID: 123188128}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -271,6 +272,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4d0203f2b234b74ebcb3da7caab0550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &123188128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123188122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0bb9d577c112644b5c97da5df0be33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &730296285
@@ -529,6 +542,18 @@ MonoBehaviour:
       - m_Target: {fileID: 123188127}
         m_TargetAssemblyTypeName: qUITGAME, Assembly-CSharp
         m_MethodName: Home
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 123188128}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: SFXButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

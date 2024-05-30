@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 
 public class PlayerGameplay : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class PlayerGameplay : MonoBehaviour
     [SerializeField] Sprite RevealSprite;
 
     [SerializeField] Material RevealMat;
-     ParticleSystem ShockWavePS;
+    ParticleSystem ShockWavePS;
     [SerializeField] private float DurationMaxPS;
     [SerializeField] private float DurationMinPS = 0f;
     private float AlphaLerpDelay;
@@ -29,11 +29,12 @@ public class PlayerGameplay : MonoBehaviour
     // private Shake shake;
 
     [SerializeField] GameObject MainCamera;
+    private AudioManager audioManager;
 
 
     void Start()
     {
-        MainCamera=Camera.main.gameObject;
+        MainCamera = Camera.main.gameObject;
         ShockWavePS = gameObject.GetComponentInChildren<ParticleSystem>();      //On récupère le particle System enfant du player et on l'assigne à ShockWavePS
         DurationMaxPS = ShockWavePS.startLifetime;      //On récupère le lifetime du PS et on l'assigne à DurationMaxPS et je sais que c'est obsolète mais ça fonctionne !!
 
@@ -49,12 +50,12 @@ public class PlayerGameplay : MonoBehaviour
             StartCoroutine(SWcooldown());
 
 
-          
+
 
         }
 
 
-       
+
 
 
     }
@@ -95,7 +96,7 @@ public class PlayerGameplay : MonoBehaviour
             AlphaLerpDelay = ((gameObject.transform.position - coll.gameObject.transform.position).magnitude) / RangeSW;        //On calcule la distance entre le joueur et la plateforme ce qui determine l'Alpha du Lerp Ci-Dessous
             InteractionDelay = Mathf.Lerp(DurationMinPS, DurationMaxPS, AlphaLerpDelay);        //On determine le temps que mets la SW à atteindre la plateforme grace à l'Alpha Lerp et donc la distance player -> Plateforme
             yield return new WaitForSeconds(InteractionDelay);      //On attend et on lance l'effet voulu
-           
+
             coll.gameObject.GetComponent<SpriteRenderer>().material = RevealMat; //changer le material coll.gameObject.GetComponent<SpriteRenderer>().material
             coll.GetComponent<Collider2D>().isTrigger = false;
         }
@@ -108,20 +109,28 @@ public class PlayerGameplay : MonoBehaviour
             //MainCamera.GetComponent<Shake>().Update();
             yield return new WaitForSeconds(InteractionDelay);
             Destroy(coll.gameObject);
+            // AudioManager._Instance.PlaySFX(audioManager.DestroyedElt);
             MainCamera.GetComponent<Shake>().StartShaking();
+            
+
         }
 
-//----------------------------------------------------------------------Screen Shake
+        
 
-    //     void OnTriggerEnter2D(Collider2D other)
-    // {
-    //      shake.CamShake();
-    //      Destroy(other.gameObject);
-    //      Instantiate(effect,transform.position, Quaternion.identity);
-    //      Destroy(gameObject);
-    //  }
-}
+
+        //----------------------------------------------------------------------Screen Shake
+
+        //     void OnTriggerEnter2D(Collider2D other)
+        // {
+        //      shake.CamShake();
+        //      Destroy(other.gameObject);
+        //      Instantiate(effect,transform.position, Quaternion.identity);
+        //      Destroy(gameObject);
+        //  }
     }
+
+   
+}
 
 
 

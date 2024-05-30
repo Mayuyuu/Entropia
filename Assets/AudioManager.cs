@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
  
 
     [Header("----------Audio Clip---------")]
-    public AudioClip background,death,checkpoint,portalIn,portalOut,ButtonUi;
+    public AudioClip background,death,checkpoint,portalIn,portalOut,ButtonUi,DestroyedElt;
  
 
     public static AudioManager _Instance;

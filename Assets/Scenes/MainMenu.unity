@@ -1013,6 +1013,10 @@ PrefabInstance:
       propertyPath: checkpoint
       value: 
       objectReference: {fileID: 8300000, guid: f124f51b5df211148a866cbb40e35b4b, type: 3}
+    - target: {fileID: 3083608779465124369, guid: 4f0691a6fe4b1004085accb9fabdf3f7, type: 3}
+      propertyPath: DestroyedElt
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c357ebad110ec240a47ea9802a25084, type: 3}
     - target: {fileID: 3199633626718046574, guid: 4f0691a6fe4b1004085accb9fabdf3f7, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
