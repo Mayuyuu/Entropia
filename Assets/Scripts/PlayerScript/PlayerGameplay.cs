@@ -30,7 +30,7 @@ public class PlayerGameplay : MonoBehaviour
 
     [SerializeField] GameObject MainCamera;
     private AudioManager audioManager;
-    
+
 
 
     void Start()
@@ -38,7 +38,7 @@ public class PlayerGameplay : MonoBehaviour
         MainCamera = Camera.main.gameObject;
         ShockWavePS = gameObject.GetComponentInChildren<ParticleSystem>();      //On récupère le particle System enfant du player et on l'assigne à ShockWavePS
         DurationMaxPS = ShockWavePS.startLifetime;      //On récupère le lifetime du PS et on l'assigne à DurationMaxPS et je sais que c'est obsolète mais ça fonctionne !!
-
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         //----------------------------------------------------------------------Screen Shake
         //shake= GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
@@ -107,17 +107,19 @@ public class PlayerGameplay : MonoBehaviour
 
             AlphaLerpDelay = ((gameObject.transform.position - coll.gameObject.transform.position).magnitude) / RangeSW;
             InteractionDelay = Mathf.Lerp(DurationMinPS, DurationMaxPS, AlphaLerpDelay);
-            //MainCamera.GetComponent<Shake>().Update();
+            AudioManager._Instance.PlaySFX(audioManager.DestroyedElt);
             yield return new WaitForSeconds(InteractionDelay);
+
             Destroy(coll.gameObject);
-           
             MainCamera.GetComponent<Shake>().StartShaking();
-             AudioManager._Instance.PlaySFX(audioManager.DestroyedElt);
-            
+
+
+
+
 
         }
 
-        
+
 
 
         //----------------------------------------------------------------------Screen Shake
@@ -131,7 +133,7 @@ public class PlayerGameplay : MonoBehaviour
         //  }
     }
 
-   
+
 }
 
 
