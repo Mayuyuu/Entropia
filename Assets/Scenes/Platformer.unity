@@ -16985,7 +16985,7 @@ MonoBehaviour:
   ZoomCooldownTime: 5
   cam: {fileID: 896877707}
   cooldownImage: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 1218077430}
 --- !u!20 &896877707 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3567834758630631769, guid: b5518c20fa128ca47a66d0250b0a9987, type: 3}
@@ -23389,6 +23389,27 @@ MonoBehaviour:
   cam: {fileID: 896877707}
   cooldownImage: {fileID: 0}
   anim: {fileID: 0}
+--- !u!95 &1218077430
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218077418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6749283e0c972d84ebc15356e22380b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1221537917
 GameObject:
   m_ObjectHideFlags: 0
@@ -41750,6 +41771,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 62106817533504357, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1218077426}
+    - targetCorrespondingSourceObject: {fileID: 62106817533504357, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1218077430}
   m_SourcePrefab: {fileID: 100100000, guid: a9936aac292bd244ba1713e3242c24eb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
