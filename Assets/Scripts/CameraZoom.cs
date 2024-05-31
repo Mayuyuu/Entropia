@@ -29,8 +29,8 @@ public class CameraZoom : MonoBehaviour
     void Start()
     {
         zoom = cam.orthographicSize;
-        //cooldownImage.fillAmount =0;
-        cooldownImage.enabled = false;
+        cooldownImage.fillAmount =1;
+        // cooldownImage.enabled = false;
     }
 
     // Update is called once per frame
@@ -40,7 +40,7 @@ public class CameraZoom : MonoBehaviour
         if ( Input.GetKeyDown("c") && isZoomReady)
         {
             isZoomReady = false;
-            anim = GetComponent<Animator>();
+            // anim = GetComponent<Animator>();
             StartCoroutine(ZoomCooldown());
         }
 
@@ -57,21 +57,21 @@ public class CameraZoom : MonoBehaviour
     public IEnumerator ZoomCooldown()
     {
         zoom = maxZoom;
-        //cooldownImage.fillAmount =1;
-        // cooldownImage.enabled = true;
-        anim.Play("C key");
-        //float elapsedTime =0f;
-        /*while (elapsedTime < ZoomCooldownTime)
+        cooldownImage.fillAmount =0;
+        cooldownImage.enabled = true;
+        // anim.Play("C key");
+        float elapsedTime =0f;
+        while (elapsedTime < ZoomCooldownTime)
         {
             elapsedTime += Time.deltaTime;
-            cooldownImage.fillAmount = 1-(elapsedTime / ZoomCooldownTime);
+            cooldownImage.fillAmount = (elapsedTime / ZoomCooldownTime);
             yield return null;
-        }*/
+        }
 
-        //cooldownImage.fillAmount = 0;
-        // cooldownImage.enabled = false;
+        cooldownImage.fillAmount = 1;
+        //cooldownImage.enabled = false;
         
-        yield return new WaitForSeconds(ZoomCooldownTime);
+        //yield return new WaitForSeconds(ZoomCooldownTime);
         isZoomReady = true;
 
     }
