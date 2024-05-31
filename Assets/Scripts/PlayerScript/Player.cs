@@ -231,7 +231,7 @@ public class Player : MonoBehaviour
 
 
     }
-    //------------------------------------------------------A REVOIR
+
     void Die()
     {
         Respawn();

@@ -15,7 +15,7 @@ public class PortalController : MonoBehaviour
     private void Awake()
     {
         player=GameObject.FindGameObjectWithTag("Player");
-        anim = player.GetComponent<Animation>();
+        // anim = player.GetComponent<Animation>();
         playerRb=player.GetComponent<Rigidbody2D>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +24,7 @@ public class PortalController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             
-            GameObject player = collision.gameObject;
+            player = collision.gameObject;
             
             if (Vector2.Distance(player.transform.position, transform.position) >0.3f)
             {
@@ -40,10 +40,10 @@ public class PortalController : MonoBehaviour
     IEnumerator PortalIn()
     {
         // playerRb.simulated =false;
-        anim.Play("Portal In");
+        //anim.Play("Portal In");
         yield return new WaitForSeconds(0.5f);
         player.transform.position = destination.transform.position;
-        anim.Play("Portal Out");
+        //anim.Play("Portal Out");
         //yield return new WaitForSeconds(0.5f);
         // playerRb.simulated =true;
     }

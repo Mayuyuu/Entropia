@@ -14,7 +14,7 @@ public class EndGameCinematic : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsClose = true;
-            Debug.Log("lance toi ptn");
+            
             // StartCoroutine(LastCinematic());
             SceneManager.LoadScene("EndCinematic");
         }
